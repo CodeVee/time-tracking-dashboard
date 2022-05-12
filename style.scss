@@ -1,0 +1,57 @@
+$blue: hsl(246, 80%, 60%);
+$light-red: hsl(15, 100%, 70%);
+$soft-blue: hsl(195, 74%, 62%);
+$light-red: hsl(348, 100%, 68%);
+$lime-green: hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$soft-orange: hsl(43, 84%, 65%);
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+
+$font-rubik: 'Rubik', sans-serif;;
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fs-10: 10px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$tablet: 768px;
+$desktop: 1280px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-rubik;
+}
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: 8.89px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: 11.04px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
