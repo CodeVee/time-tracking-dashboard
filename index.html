@@ -7,17 +7,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">nk
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
+  <main class="main">
+    <div class="wrapper">
+      <div class="profile">
+        <div class="profile__info">
+          <div class="profile__avatar">
+            <img src="images/image-jeremy.png" alt="jeremy">
+          </div>
+          <span class="profile__heading">Report for</span>
+          <h1 class="profile__name">Jeremy Robson</h1>
+        </div>
+        <div class="profile__btns">
+          <button id="btn-daily" class="profile__btn">Daily</button>
+          <button id="btn-weekly" class="profile__btn profile__btn--active">Weekly</button>
+          <button id="btn-monthly" class="profile__btn">Monthly</button>
+        </div>
+      </div>
+      <div class="time"></div>
+      <div class="time"></div>
+      <div class="time"></div>
+      <div class="time"></div>
+      <div class="time"></div>
+      <div class="time"></div>
+    </div>
+    
+  </main>
+  
+  
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
+  
+  
+  
 
   Work
   5hrs <!-- daily -->
@@ -65,8 +89,7 @@
   2hrs <!-- weekly -->
   Previous - 2hrs <!-- weekly -->
   7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+  Previous - 11hrs monthly
   <script src="main.js"></script>
 </body>
 </html>
