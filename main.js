@@ -5,6 +5,11 @@ const daily = 'daily';
 const weekly = 'weekly';
 const monthly = 'monthly';
 
+const day = 'Day';
+const week = 'Week';
+const month = 'Month';
+const periods = document.getElementsByClassName('period');
+
 const dailyBtn = document.getElementById('btn-daily');
 const weeklyBtn = document.getElementById('btn-weekly');
 const monthlyBtn = document.getElementById('btn-monthly');
@@ -60,6 +65,27 @@ const processPeriod = async (period) => {
     selfCareCurrent.innerText = hours[5].timeframes[period].current;
     selfCarePrevious.innerText = hours[5].timeframes[period].previous;
 
+    resetBtns();
+    let timePeriod = ''
+    switch (period) {
+        case daily:
+            dailyBtn.classList.add(activeBtn);
+            timePeriod = day;
+            break;
+        case weekly:
+            weeklyBtn.classList.add(activeBtn);
+            timePeriod = week;
+            break;
+        case monthly:
+            monthlyBtn.classList.add(activeBtn);
+            timePeriod = month;
+            break;
+        default:
+            break;
+    }
+
+    Array.from(periods).forEach(p => p.innerHTML = timePeriod);
+
 }
 
 const handler = async (e) => {
@@ -67,20 +93,14 @@ const handler = async (e) => {
 };
 
 const btnDailyHandler = (e) => {
-    resetBtns();
-    dailyBtn.classList.add(activeBtn);
     processPeriod(daily);
 }
 
 const btnWeeklyHandler = (e) => {
-    resetBtns();
-    weeklyBtn.classList.add(activeBtn);
     processPeriod(weekly);
 }
 
 const btnMonthlyHandler = (e) => {
-    resetBtns();
-    monthlyBtn.classList.add(activeBtn);
     processPeriod(monthly);
 }
 
