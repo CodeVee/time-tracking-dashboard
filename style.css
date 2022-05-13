@@ -34,7 +34,7 @@ body, html {
   flex-direction: column;
 }
 .profile__info {
-  background: hsl(264deg, 64%, 52%);
+  background: hsl(246deg, 80%, 60%);
   height: 35.4rem;
   border-radius: 1.5rem;
   padding-top: 3.7rem;
