@@ -20,7 +20,6 @@ body, html {
 .wrapper {
   width: 111rem;
   height: 51.8rem;
-  background: wheat;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -88,8 +87,72 @@ body, html {
 }
 
 .time {
-  background: purple;
   border-radius: 1.5rem;
+  position: relative;
+  overflow: clip;
+  display: flex;
+}
+.time--work {
+  background: hsl(15deg, 100%, 70%);
+}
+.time--play {
+  background: hsl(195deg, 74%, 62%);
+}
+.time--study {
+  background: hsl(348deg, 100%, 68%);
+}
+.time--exercise {
+  background: hsl(145deg, 58%, 55%);
+}
+.time--social {
+  background: hsl(264deg, 64%, 52%);
+}
+.time--self-care {
+  background: hsl(43deg, 84%, 65%);
+}
+.time__img {
+  position: absolute;
+  right: 1.742rem;
+  top: -1.091rem;
+}
+.time__info {
+  height: 19.9rem;
+  background: hsl(235deg, 46%, 20%);
+  flex: 1;
+  align-self: flex-end;
+  border-radius: 1.5rem;
+  z-index: 1;
+  padding: 2.9rem 3rem 3.2rem;
+}
+.time__headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.time__header {
+  color: hsl(255deg, 100%, 100%);
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.133rem;
+}
+.time__stats {
+  display: flex;
+  flex-direction: column;
+  height: 9.2rem;
+  justify-content: space-between;
+}
+.time__hour {
+  color: hsl(255deg, 100%, 100%);
+  font-size: 5.6rem;
+  font-weight: 300;
+  line-height: 6.636rem;
+}
+.time__past {
+  font-size: 1.5rem;
+  line-height: 1.778rem;
+  color: hsl(236deg, 100%, 87%);
+  font-weight: 400;
 }
 
 @media screen and (max-width: 1280px) {

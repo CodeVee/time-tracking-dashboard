@@ -1,7 +1,7 @@
 $blue: hsl(246, 80%, 60%);
 $light-red: hsl(15, 100%, 70%);
 $soft-blue: hsl(195, 74%, 62%);
-$light-red: hsl(348, 100%, 68%);
+$deep-red: hsl(348, 100%, 68%);
 $lime-green: hsl(145, 58%, 55%);
 $violet: hsl(264, 64%, 52%);
 $soft-orange: hsl(43, 84%, 65%);
@@ -44,7 +44,6 @@ body, html {
 .wrapper {
     width: 111rem;
     height: 51.8rem;
-    background: wheat;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -125,8 +124,85 @@ body, html {
 }
 
 .time {
-    background: purple;
     border-radius: 1.5rem;
+    position: relative;
+    overflow: clip;
+    display: flex;
+
+    &--work {
+        background: $light-red;
+    }
+
+    &--play {
+        background: $soft-blue;
+    }
+
+    &--study {
+        background: $deep-red;
+    }
+
+    &--exercise {
+        background: $lime-green;
+    }
+
+    &--social {
+        background: $violet;
+    }
+
+    &--self-care {
+        background: $soft-orange;
+    }
+
+    &__img {
+        position: absolute;
+        right: 1.742rem;
+        top: -1.091rem;
+    }
+
+    &__info {
+        height: 19.9rem;
+        background: $dark-blue;
+        flex: 1;
+        align-self: flex-end;
+        border-radius: 1.5rem;
+        z-index: 1;
+        padding: 2.9rem 3rem 3.2rem;
+    }
+
+    &__headers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.4rem;
+    }
+
+    &__header {
+        color: $white;
+        font-weight: $fw-500;
+        font-size: 1.8rem;
+        line-height: 2.133rem;
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        height: 9.2rem;
+        justify-content: space-between;
+    }
+
+    &__hour {
+        color: $white;
+        font-size: 5.6rem;
+        font-weight: $fw-300;
+        line-height: 6.636rem;
+    }
+
+    &__past {
+        font-size: 1.5rem;
+        line-height: 1.778rem;
+        color: $pale-blue;
+        font-weight: $fw-400;
+    }
 }
 
 @media screen and (max-width: $desktop) {
