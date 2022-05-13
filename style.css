@@ -52,9 +52,14 @@ body, html {
 .profile__avatar > img {
   width: 100%;
 }
+.profile__details {
+  display: flex;
+  flex-direction: column;
+}
 .profile__heading {
   color: hsl(236deg, 100%, 87%);
   font-size: 1.5rem;
+  font-weight: 400;
   line-height: 1.8rem;
   margin-bottom: 0.3rem;
 }
@@ -80,6 +85,8 @@ body, html {
   background: transparent;
   color: hsl(235deg, 45%, 61%);
   font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.133rem;
   cursor: pointer;
 }
 .profile__btn--active {
@@ -179,14 +186,76 @@ body, html {
     font-size: 8.89px;
   }
 }
-@media screen and (max-width: 768px) {
-  body, html {
-    font-size: 10px;
-  }
-}
 @media screen and (max-width: 430px) {
   body, html {
     font-size: 11.04px;
+  }
+
+  .main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    min-height: 100vh;
+    padding: 8.1rem 2.4rem;
+  }
+
+  .wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile {
+    height: 20.3rem;
+  }
+  .profile__info {
+    height: 13.3rem;
+    padding-top: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+  .profile__avatar {
+    width: 6.4rem;
+    height: 6.4rem;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  .profile__heading {
+    line-height: 1.778rem;
+    margin-bottom: 0.4rem;
+  }
+  .profile__name {
+    font-size: 2.4rem;
+    line-height: 2.844rem;
+  }
+  .profile__btns {
+    flex: 1;
+    padding-top: 2.4rem;
+    padding-right: 2.2rem;
+    padding-bottom: 2.5rem;
+    flex-direction: row;
+  }
+
+  .time {
+    height: 16rem;
+  }
+  .time__info {
+    height: 12.2rem;
+    z-index: 1;
+    padding: 2.8rem 2.4rem;
+  }
+  .time__headers {
+    margin-bottom: 0.6rem;
+  }
+  .time__stats {
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+  }
+  .time__hour {
+    font-size: 3.2rem;
+    line-height: 3.792rem;
   }
 }
 @media screen and (max-width: 400px) {
