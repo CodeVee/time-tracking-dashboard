@@ -85,6 +85,9 @@ body, html {
 .profile__btn--active {
   color: hsl(255deg, 100%, 100%);
 }
+.profile__btn:hover {
+  color: hsl(255deg, 100%, 100%);
+}
 
 .time {
   border-radius: 1.5rem;
@@ -123,6 +126,10 @@ body, html {
   border-radius: 1.5rem;
   z-index: 1;
   padding: 2.9rem 3rem 3.2rem;
+  cursor: pointer;
+}
+.time__info:hover {
+  background: hsl(235deg, 41%, 34%);
 }
 .time__headers {
   display: flex;
@@ -135,6 +142,18 @@ body, html {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.133rem;
+}
+.time__ellipsis {
+  width: 2.1rem;
+}
+.time__ellipsis .active {
+  display: none;
+}
+.time__ellipsis:hover .regular {
+  display: none;
+}
+.time__ellipsis:hover .active {
+  display: inline-block;
 }
 .time__stats {
   display: flex;
